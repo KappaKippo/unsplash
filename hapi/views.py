@@ -1,4 +1,4 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 
 from .forms import SearchForm
@@ -13,10 +13,9 @@ def search(request):
         if form.is_valid():
             # We have to validate the data here
             # Redirect to a new URL
-            return HttpResponseRedirect("image")
+            return HttpResponse("Site Under Construction")
     # If we receive any other form that POST we will return a blank form
     else:
         form = SearchForm()
 
     return render(request, "search_template.html", {"form": form})
-
