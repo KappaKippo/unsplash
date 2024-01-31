@@ -1,8 +1,10 @@
-import requests
 import random
-from unsplash.settings import CLIENT_ID
+
+import requests
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+
+from unsplash.settings import CLIENT_ID
 
 from .forms import SearchForm
 
